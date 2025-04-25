@@ -18,8 +18,10 @@
         ]
     },
     "dependencies": {
+        "@gsap/react": "^2.1.2",
         "@react-buddy/ide-toolbox": "^2.4.0",
         "@tailwindcss/vite": "^4.1.4",
+        "gsap": "^3.12.7",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "tailwindcss": "^4.1.4"
