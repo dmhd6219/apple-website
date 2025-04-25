@@ -9,12 +9,6 @@
     --color-zinc: #101010;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     color: white;
     width: 100dvw;
@@ -29,7 +23,7 @@ canvas {
     touch-action: none;
 }
 
-.scrim-max-width {
+.screen-max-width {
     margin-inline-start: auto;
     margin-inline-end: auto;
     position: relative;
