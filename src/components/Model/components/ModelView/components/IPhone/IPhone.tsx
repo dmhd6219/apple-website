@@ -1,0 +1,261 @@
+import { useGLTF, useTexture } from '@react-three/drei';
+import * as THREE from 'three';
+import { useEffect } from 'react';
+import { Model } from '@/components/Model/types/model';
+
+interface IPhoneProps {
+    item: Model;
+    size: string;
+    scale: [x: number, y: number, z: number];
+}
+
+function IPhone({ item, scale }: IPhoneProps) {
+    const { nodes, materials } = useGLTF('/models/scene.glb');
+    const getMesh = (node: THREE.Object3D) => node as THREE.Mesh;
+
+    const texture = useTexture(item.img);
+
+    useEffect(() => {
+        Object.entries(materials).map((material) => {
+            if (
+                material[0] !== 'zFdeDaGNRwzccye' &&
+                material[0] !== 'ujsvqBWRMnqdwPx' &&
+                material[0] !== 'hUlRcbieVuIiOXG' &&
+                material[0] !== 'jlzuBkUzuJqgiAK' &&
+                material[0] !== 'xNrofRCqOXXHVZt'
+            ) {
+                // @ts-expect-error: material has a color
+                material[1].color = new THREE.Color(item.color[0]);
+            }
+            material[1].needsUpdate = true;
+        });
+    }, [materials, item]);
+
+    return (
+        <group scale={scale} dispose={null}>
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.ttmRoLdJipiIOmf).geometry}
+                material={materials.hUlRcbieVuIiOXG}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.DjsDkGiopeiEJZK).geometry}
+                material={materials.PaletteMaterial001}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.buRWvyqhBBgcJFo).geometry}
+                material={materials.PaletteMaterial002}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.MrMmlCAsAxJpYqQ_0).geometry}
+                material={materials.dxCVrUCvYhjVxqy}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.wqbHSzWaUxBCwxY_0).geometry}
+                material={materials.MHFGNLrDQbTNima}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.QvGDcbDApaGssma).geometry}
+                material={materials.kUhjpatHUvkBwfM}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.vFwJFNASGvEHWhs).geometry}
+                material={materials.RJoymvEsaIItifI}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.evAxFwhaQUwXuua).geometry}
+                material={materials.KSIxMqttXxxmOYl}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.USxQiqZgxHbRvqB).geometry}
+                material={materials.mcPrzcBUcdqUybC}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.TvgBVmqNmSrFVfW).geometry}
+                material={materials.pIhYLPqiSQOZTjn}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.GuYJryuYunhpphO).geometry}
+                material={materials.eShKpuMNVJTRrgg}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.pvdHknDTGDzVpwc).geometry}
+                material={materials.xdyiJLYTYRfJffH}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.CfghdUoyzvwzIum).geometry}
+                material={materials.jpGaQNgTtEGkTfo}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.DjdhycfQYjKMDyn).geometry}
+                material={materials.ujsvqBWRMnqdwPx}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.usFLmqcyrnltBUr).geometry}
+                material={materials.sxNzrmuTqVeaXdg}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.xXDHkMplTIDAXLN).geometry}
+                material={materials.pIJKfZsazmcpEiU}
+                scale={0.01}
+            >
+                <meshStandardMaterial roughness={1} map={texture} />
+            </mesh>
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.vELORlCJixqPHsZ).geometry}
+                material={materials.zFdeDaGNRwzccye}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.EbQGKrWAqhBHiMv).geometry}
+                material={materials.TBLSREBUyLMVtJa}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.EddVrWkqZTlvmci).geometry}
+                material={materials.xNrofRCqOXXHVZt}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.KSWlaxBcnPDpFCs).geometry}
+                material={materials.yQQySPTfbEJufve}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.TakBsdEjEytCAMK).geometry}
+                material={materials.PaletteMaterial003}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.IykfmVvLplTsTEW).geometry}
+                material={materials.PaletteMaterial004}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.wLfSXtbwRlBrwof).geometry}
+                material={materials.oZRkkORNzkufnGD}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.WJwwVjsahIXbJpU).geometry}
+                material={materials.yhcAXNGcJWCqtIS}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.YfrJNXgMvGOAfzz).geometry}
+                material={materials.bCgzXjHOanGdTFV}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.DCLCbjzqejuvsqH).geometry}
+                material={materials.vhaEJjZoqGtyLdo}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.CdalkzDVnwgdEhS).geometry}
+                material={materials.jlzuBkUzuJqgiAK}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.NtjcIgolNGgYlCg).geometry}
+                material={materials.PpwUTnTFZJXxCoE}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.pXBNoLiaMwsDHRF).geometry}
+                material={materials.yiDkEwDSyEhavuP}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.IkoiNqATMVoZFKD).geometry}
+                material={materials.hiVunnLeAHkwGEo}
+                scale={0.01}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={getMesh(nodes.rqgRAGHOwnuBypi).geometry}
+                material={materials.HGhEhpqSBZRnjHC}
+                scale={0.01}
+            />
+        </group>
+    );
+}
+
+useGLTF.preload('/models/scene.glb');
+
+export default IPhone;

@@ -12,7 +12,10 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "three/addons/controls/*": [
+                "node_modules/@types/three/addons/controls/*"
+            ]
         }
     }
 }
