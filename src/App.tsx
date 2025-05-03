@@ -5,6 +5,8 @@ import { Model } from '@/components/Model';
 import { Features } from '@/components/Features';
 import { Chip } from '@/components/Chip';
 import { Footer } from '@/components/Footer';
+import { MetrikaCounter } from 'react-metrika';
+import { YM_COUNTER_ID } from '@/config/ym';
 
 const App = () => {
     return (
@@ -16,6 +18,17 @@ const App = () => {
             <Features />
             <Chip />
             <Footer />
+            <MetrikaCounter
+                id={YM_COUNTER_ID}
+                options={{
+                    trackHash: true,
+
+                    webvisor: true,
+                    trackLinks: true,
+                    clickmap: true,
+                    accurateTrackBounce: true,
+                }}
+            />
         </main>
     );
 };

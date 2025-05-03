@@ -3,6 +3,8 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { chipImg, frameImg, frameVideo } from '@/utils';
 import { animateWithGSAP } from '@/utils/animations';
+import { ym } from 'react-metrika';
+import { YM_COUNTER_ID } from '@/config/ym';
 
 const Chip = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -12,6 +14,9 @@ const Chip = () => {
             scrollTrigger: {
                 trigger: '#chip',
                 start: '20% bottom',
+                onEnter: () => {
+                    ym(YM_COUNTER_ID, 'reachGoal', 'chipSection');
+                },
             },
             opacity: 0,
             scale: 2,
