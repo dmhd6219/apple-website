@@ -9,6 +9,11 @@
     --color-zinc: #101010;
 }
 
+main {
+    touch-action: pan-y;
+    overflow-y: auto;
+}
+
 body {
     color: white;
     width: 100dvw;
