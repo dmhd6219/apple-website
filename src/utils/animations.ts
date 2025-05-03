@@ -11,7 +11,7 @@ export const animateWithGSAPTimeline = (
     rotationState: number,
     firstTarget: string,
     secondTarget: string,
-    animationProps: Record<string, string>,
+    animationProps: Record<string, string | number>,
 ) => {
     tl.to(rotationRef.current.rotation, {
         y: rotationState,

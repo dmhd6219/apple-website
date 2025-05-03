@@ -9,7 +9,7 @@
         "lint": "eslint .",
         "preview": "vite preview",
         "prettier": "prettier . --write",
-        "format": "eslint . --fix --no-warn-ignored && prettier . --write",
+        "format": "tsc -b && eslint . --fix --no-warn-ignored && prettier . --write",
         "prepare": "husky"
     },
     "lint-staged": {
