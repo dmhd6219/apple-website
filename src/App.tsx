@@ -4,6 +4,7 @@ import { Highlights } from '@/components/Highlights';
 import { Model } from '@/components/Model';
 import { Features } from '@/components/Features';
 import { Chip } from '@/components/Chip';
+import { Footer } from '@/components/Footer';
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
             <Model />
             <Features />
             <Chip />
+            <Footer />
         </main>
     );
 };
