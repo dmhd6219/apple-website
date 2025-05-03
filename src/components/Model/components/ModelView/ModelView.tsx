@@ -47,8 +47,8 @@ const ModelView = ({
                 target={new THREE.Vector3(0, 0, 0)}
                 onEnd={() => {
                     if (controlRef.current) {
-                        // @ts-expect-error: object is that i need
                         setRotationState(
+                            // @ts-expect-error: object is that i need
                             controlRef.current.getAzimuthalAngle(),
                         );
                     }
